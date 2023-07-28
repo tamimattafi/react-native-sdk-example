@@ -1,4 +1,4 @@
-package com.react_native_sdk_template;
+package com.attafitamim.react.sdk.template;
 
 import com.facebook.react.ReactActivity;
 import com.facebook.react.ReactActivityDelegate;
