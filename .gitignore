@@ -26,6 +26,8 @@ project.xcworkspace
 *~.nib
 Pods/
 *.xcworkspace/
+*/SDKOutput/Rescources/
+*/SDKOutput/Frameworks/
 
 # Android/IntelliJ
 #
