@@ -1,6 +1,6 @@
 DIR=$PWD
 
-PROJECT_NAME=react_native_sdk_template
+PROJECT_NAME=RNSDKExample
 FRAMEWORK_NAME=RNSDK
 OUT_BUILD_DIR=$DIR/ios/build
 OUT_FW_DIR=$DIR/ios/SDKOutput/Frameworks
@@ -12,7 +12,8 @@ SIMULATOR_ARCHIVE_PATH=$OUT_BUILD_DIR/${FRAMEWORK_NAME}-iphonesimulator.xcarchiv
 DEVICE_ARCHIVE_PATH=$OUT_BUILD_DIR/${FRAMEWORK_NAME}-iphoneos.xcarchive
 
 # Simulator xcarchieve
-xcodebuild archive -workspace ios/${PROJECT_NAME}.xcworkspace \
+xcodebuild archive \
+  -workspace ios/${PROJECT_NAME}.xcworkspace \
   -scheme ${FRAMEWORK_NAME} \
   -archivePath ${SIMULATOR_ARCHIVE_PATH} \
   -configuration Release \
@@ -22,7 +23,8 @@ xcodebuild archive -workspace ios/${PROJECT_NAME}.xcworkspace \
   clean build
 
 # Device xcarchieve
-xcodebuild archive -workspace ios/${PROJECT_NAME}.xcworkspace \
+xcodebuild archive \
+  -workspace ios/${PROJECT_NAME}.xcworkspace \
   -scheme ${FRAMEWORK_NAME} \
   -archivePath ${DEVICE_ARCHIVE_PATH} \
   -sdk iphoneos \

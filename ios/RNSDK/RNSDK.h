@@ -2,7 +2,7 @@
 //  RNSDK.h
 //  RNSDK
 //
-//  Created by Tamim Attafi on 28.07.2023.
+//  Created by Tamim Attafi on 31.07.2023.
 //
 
 #import <Foundation/Foundation.h>

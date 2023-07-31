@@ -1,12 +1,12 @@
 {
   "name": "RNSDK",
   "version": "1.1.0",
-  "description": "This repository makes it easier to quick start a React Native SDK that can be used inside native Android and iOS projects",
-  "author": "Tamim Attafi",
-  "homepage": "https://github.com/tamimattafi/react-native-sdk-template#readme",
-  "license": "Apache-2.0",
+  "description": "Description of RNSDK",
+  "author": "Liam Vuong",
+  "homepage": "https://github.com/lamvd0101/react-native-sdk-example#readme",
+  "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/tamimattafi/react-native-sdk-template.git"
+    "url": "git@github.com:lamvd0101/react-native-sdk-example.git"
   }
 }
