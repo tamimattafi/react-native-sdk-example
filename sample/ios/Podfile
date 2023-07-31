@@ -5,5 +5,5 @@ target 'RNSDKSample' do
   use_frameworks!
 
   # Pods for RNSDKSample
-  pod 'RNSDK', :podspec => '../../ios/SDKOutput/RNSDK.podspec'
+  pod 'RNSDK', :path => '../../ios/SDKOutput'
 end

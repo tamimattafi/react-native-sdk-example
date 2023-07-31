@@ -8,7 +8,7 @@
 import UIKit
 import RNSDK
 
-class ViewController: RNSDKViewController {
+class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -16,5 +16,10 @@ class ViewController: RNSDKViewController {
     }
 
 
+    @IBAction func startReactNative(_ sender: Any) {
+        let controller = RNSDKViewController()
+        present(controller, animated: true, completion: nil)
+        
+    }
 }
 
