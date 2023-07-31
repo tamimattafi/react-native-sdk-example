@@ -366,7 +366,7 @@ DEPENDENCIES:
   - React-RCTVibration (from `../node_modules/react-native/Libraries/Vibration`)
   - React-runtimeexecutor (from `../node_modules/react-native/ReactCommon/runtimeexecutor`)
   - ReactCommon/turbomodule/core (from `../node_modules/react-native/ReactCommon`)
-  - RNFastImage (from `../node_modules/react-native-fast-image`)
+  - RNFastImage (from `../node_modules/react-native-fast-image/RNFastImage.podspec`)
   - Yoga (from `../node_modules/react-native/ReactCommon/yoga`)
 
 SPEC REPOS:
@@ -445,7 +445,7 @@ EXTERNAL SOURCES:
   ReactCommon:
     :path: "../node_modules/react-native/ReactCommon"
   RNFastImage:
-    :path: "../node_modules/react-native-fast-image"
+    :podspec: "../node_modules/react-native-fast-image/RNFastImage.podspec"
   Yoga:
     :path: "../node_modules/react-native/ReactCommon/yoga"
 
@@ -491,6 +491,6 @@ SPEC CHECKSUMS:
   SDWebImageWebPCoder: 908b83b6adda48effe7667cd2b7f78c897e5111d
   Yoga: eca980a5771bf114c41a754098cd85e6e0d90ed7
 
-PODFILE CHECKSUM: af0c52035dd41f750b693fbad0917950d7f88fa3
+PODFILE CHECKSUM: 3cf45c7ee073f9547f3e3115e5c8c27a98a68f9e
 
 COCOAPODS: 1.12.1

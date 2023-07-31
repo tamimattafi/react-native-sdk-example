@@ -1,0 +1,21 @@
+PODS:
+  - RNSDK (1.1.0)
+
+DEPENDENCIES:
+  - RNSDK (from `../../ios/SDKOutput/RNSDK.podspec`)
+
+EXTERNAL SOURCES:
+  RNSDK:
+    :podspec: "../../ios/SDKOutput/RNSDK.podspec"
+
+CHECKOUT OPTIONS:
+  RNSDK:
+    :commit: c1fcbb519b67f7e429544b883bff385bbe74af88
+    :git: "git@github.com:lamvd0101/react-native-sdk-example.git"
+
+SPEC CHECKSUMS:
+  RNSDK: c2bf1dfd111a0aa866ac695c4d0099b6af5fb195
+
+PODFILE CHECKSUM: 7cda95382390c1f69003225d4aa9c4f082a87c17
+
+COCOAPODS: 1.12.1
