@@ -1,0 +1,16 @@
+PODS:
+  - RNSDK (1.1.0)
+
+DEPENDENCIES:
+  - RNSDK (from `../../ios/SDKOutput`)
+
+EXTERNAL SOURCES:
+  RNSDK:
+    :path: "../../ios/SDKOutput"
+
+SPEC CHECKSUMS:
+  RNSDK: c2bf1dfd111a0aa866ac695c4d0099b6af5fb195
+
+PODFILE CHECKSUM: 6e96ba3a24ce9791e604fb53d4bcb2a1acffd1d1
+
+COCOAPODS: 1.12.1
