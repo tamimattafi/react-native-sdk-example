@@ -1,6 +1,6 @@
 apply plugin: 'maven-publish'
 
-task projectSourcesJar(type: Jar) {
+tasks.register('projectSourcesJar', Jar) {
     archiveClassifier.set('sources')
     if (project.plugins.findPlugin("com.android.library")) {
         // For Android libraries
@@ -14,7 +14,7 @@ task projectSourcesJar(type: Jar) {
     }
 }
 
-task javadocJar(type: Jar) {
+tasks.register('javadocJar', Jar) {
     archiveClassifier.set('javadoc')
 }
 
