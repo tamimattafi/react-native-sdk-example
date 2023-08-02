@@ -14,7 +14,7 @@ import com.facebook.soloader.SoLoader;
  * `newArchEnabled` property). Is ignored otherwise.
  */
 @DoNotStrip
-public class MainComponentsRegistry {
+public class RNSDKComponentsRegistry {
   static {
     SoLoader.loadLibrary("fabricjni");
   }
@@ -25,12 +25,12 @@ public class MainComponentsRegistry {
   private native HybridData initHybrid(ComponentFactory componentFactory);
 
   @DoNotStrip
-  private MainComponentsRegistry(ComponentFactory componentFactory) {
+  private RNSDKComponentsRegistry(ComponentFactory componentFactory) {
     mHybridData = initHybrid(componentFactory);
   }
 
   @DoNotStrip
-  public static MainComponentsRegistry register(ComponentFactory componentFactory) {
-    return new MainComponentsRegistry(componentFactory);
+  public static RNSDKComponentsRegistry register(ComponentFactory componentFactory) {
+    return new RNSDKComponentsRegistry(componentFactory);
   }
 }

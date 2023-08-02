@@ -1,0 +1,80 @@
+apply plugin: 'maven-publish'
+
+task projectSourcesJar(type: Jar) {
+    archiveClassifier.set('sources')
+    if (project.plugins.findPlugin("com.android.library")) {
+        // For Android libraries
+        from android.sourceSets.main.java.srcDirs
+        from android.sourceSets.main.kotlin.srcDirs
+        from android.sourceSets.main.jniLibs.srcDirs
+    } else {
+        // For pure Kotlin libraries, in case you have them
+        from sourceSets.main.java.srcDirs
+        from sourceSets.main.kotlin.srcDirs
+    }
+}
+
+task javadocJar(type: Jar) {
+    archiveClassifier.set('javadoc')
+}
+
+artifacts {
+    archives projectSourcesJar
+    archives javadocJar
+}
+
+group = PUBLISH_GROUP_ID
+version = PUBLISH_VERSION
+
+afterEvaluate {
+    publishing {
+        publications {
+            release(MavenPublication) {
+                groupId PUBLISH_GROUP_ID
+                artifactId PUBLISH_ARTIFACT_ID
+                version PUBLISH_VERSION
+
+                if (project.plugins.findPlugin("com.android.library")) {
+                    from components.release
+                } else {
+                    from components.java
+                }
+
+                artifact projectSourcesJar
+                artifact javadocJar
+
+                pom {
+                    name = PUBLISH_ARTIFACT_ID
+                    description = 'RNSDK for Android'
+                    url = 'google.com'
+
+                    licenses {
+                        license {
+                            name = 'Library Licence'
+                            url = 'google.com'
+                        }
+                    }
+
+                    developers {
+                        developer {
+                            id = 'ilink'
+                            name = 'iLink Developer'
+                            email = 'developer@ilink.dev'
+                        }
+                    }
+
+                    scm {
+                        connection = 'scm:git:github.com/ilink/awesomeproject.git'
+                        developerConnection = 'scm:git:ssh://github.com/ilink/awesomeproject.git'
+                        url = 'https://github.com/ilink/awesomeproject/tree/main'
+                    }
+                }
+            }
+        }
+
+        repositories {
+            mavenLocal()
+            mavenCentral()
+        }
+    }
+}

@@ -15,12 +15,12 @@ import java.util.List;
  * <p>Please note that this class is used ONLY if you opt-in for the New Architecture (see the
  * `newArchEnabled` property). Is ignored otherwise.
  */
-public class MainApplicationTurboModuleManagerDelegate
+public class RNSDKApplicationTurboModuleManagerDelegate
     extends ReactPackageTurboModuleManagerDelegate {
 
   private static volatile boolean sIsSoLibraryLoaded;
 
-  protected MainApplicationTurboModuleManagerDelegate(
+  protected RNSDKApplicationTurboModuleManagerDelegate(
       ReactApplicationContext reactApplicationContext, List<ReactPackage> packages) {
     super(reactApplicationContext, packages);
   }
@@ -30,9 +30,9 @@ public class MainApplicationTurboModuleManagerDelegate
   native boolean canCreateTurboModule(String moduleName);
 
   public static class Builder extends ReactPackageTurboModuleManagerDelegate.Builder {
-    protected MainApplicationTurboModuleManagerDelegate build(
+    protected RNSDKApplicationTurboModuleManagerDelegate build(
         ReactApplicationContext context, List<ReactPackage> packages) {
-      return new MainApplicationTurboModuleManagerDelegate(context, packages);
+      return new RNSDKApplicationTurboModuleManagerDelegate(context, packages);
     }
   }
 

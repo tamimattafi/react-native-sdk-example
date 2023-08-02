@@ -37,6 +37,10 @@ build/
 local.properties
 *.iml
 *.DS_Store
+*/SDKOutput/libs/
+*/SDKOutput/libs.txt
+android/RNSDK/src/main/assets
+android/RNSDK/src/main/res
 
 # node.js
 #

@@ -20,8 +20,8 @@ import com.facebook.react.fabric.FabricJSIModuleProvider;
 import com.facebook.react.fabric.ReactNativeConfig;
 import com.facebook.react.uimanager.ViewManagerRegistry;
 import com.rnsdkexample.BuildConfig;
-import com.rnsdkexample.newarchitecture.components.MainComponentsRegistry;
-import com.rnsdkexample.newarchitecture.modules.MainApplicationTurboModuleManagerDelegate;
+import com.rnsdkexample.newarchitecture.components.RNSDKComponentsRegistry;
+import com.rnsdkexample.newarchitecture.modules.RNSDKApplicationTurboModuleManagerDelegate;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -32,8 +32,8 @@ import java.util.List;
  * <p>Please note that this class is used ONLY if you opt-in for the New Architecture (see the
  * `newArchEnabled` property). Is ignored otherwise.
  */
-public class MainApplicationReactNativeHost extends ReactNativeHost {
-  public MainApplicationReactNativeHost(Application application) {
+public class RNSDKApplicationReactNativeHost extends ReactNativeHost {
+  public RNSDKApplicationReactNativeHost(Application application) {
     super(application);
   }
 
@@ -65,7 +65,7 @@ public class MainApplicationReactNativeHost extends ReactNativeHost {
       getReactPackageTurboModuleManagerDelegateBuilder() {
     // Here we provide the ReactPackageTurboModuleManagerDelegate Builder. This is necessary
     // for the new architecture and to use TurboModules correctly.
-    return new MainApplicationTurboModuleManagerDelegate.Builder();
+    return new RNSDKApplicationTurboModuleManagerDelegate.Builder();
   }
 
   @Override
@@ -94,7 +94,7 @@ public class MainApplicationReactNativeHost extends ReactNativeHost {
                 // Here we register a Components Registry.
                 // The one that is generated with the template contains no components
                 // and just provides you the one from React Native core.
-                MainComponentsRegistry.register(componentFactory);
+                RNSDKComponentsRegistry.register(componentFactory);
 
                 final ReactInstanceManager reactInstanceManager = getReactInstanceManager();
 
